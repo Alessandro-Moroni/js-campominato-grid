@@ -36,9 +36,6 @@ function squareContainer(number){
 }
 
 
-// function startBtn(){
-//   const btn
-// }
 
 
 function reset(){
