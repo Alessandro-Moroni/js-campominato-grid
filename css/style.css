@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.back{
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.container{
+  background-color: crimson;
+  height: 500px;
+  width: 500px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  grid-row: row;
+  
+}
+
+.square{
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  background-color: rgb(179, 116, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
