@@ -16,7 +16,6 @@ function squareContainer(number){
   sq.className = 'square';
   
   sq.propSq = number;
-  sq.dataset.squid = number;
 
   sq.addEventListener('click', function(){
     const number = this.propSq;

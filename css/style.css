@@ -26,8 +26,8 @@
 }
 
 .square{
-  height: 49px;
-  width: 49px;
+  height: 10%;
+  width: 10%;
   border: 1px solid white;
   display: flex;
   align-items: center;
