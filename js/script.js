@@ -1,11 +1,14 @@
 const container = document.querySelector('.container');
 
+
 reset();
 
-for(let i = 1; i <= 100; i++){
-  const square = squareContainer(i);
-  container.append(square);
-}
+
+  for(let i = 1; i <= 100; i++){
+    const square = squareContainer(i);
+    container.append(square);
+  }
+
 
 
 function squareContainer(number){
@@ -13,18 +16,21 @@ function squareContainer(number){
   sq.className = 'square';
   
   sq.propSq = number;
+  sq.dataset.squid = number;
 
   sq.addEventListener('click', function(){
-    this.innerHTML = (!this.classList.contains('clicked')) ? this.innerHTML = this.propSq : this.innerHTML = '';
+    const number = this.propSq;
+    this.innerHTML = (!this.classList.contains('color')) ? this.innerHTML = this.propSq : this.innerHTML = '';
 
-    this.classList.toggle('clicked');
+    this.classList.toggle('color');
 
+    console.log(this);
   })
-
 
 
   return sq;
 }
+
 
 function reset(){
   container.innerHTML = '';
