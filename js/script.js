@@ -1,15 +1,20 @@
 const container = document.querySelector('.container');
+const startBtn = document.getElementById('btn');
+// const c = parseInt(prompt('testo'));
+// start(c);
+startBtn.addEventListener('click', start);
 
 
-reset();
-
-
+function start(){
+  reset();
   for(let i = 1; i <= 100; i++){
     const square = squareContainer(i);
     container.append(square);
   }
+}
 
-
+ 
+  
 
 function squareContainer(number){
   const sq = document.createElement('div');
@@ -31,6 +36,26 @@ function squareContainer(number){
 }
 
 
+// function startBtn(){
+//   const btn
+// }
+
+
 function reset(){
   container.innerHTML = '';
 }
+
+
+// function start(c){
+//   const uno = 100;
+//   const due = 81;
+//   const tre = 49;
+
+//   for(let i = 1; i <= c; i++){
+//       const square = squareContainer(i);
+//       container.append(square);
+
+//     }
+
+
+// }

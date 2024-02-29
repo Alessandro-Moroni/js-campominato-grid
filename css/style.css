@@ -39,3 +39,17 @@
   background-color: rgb(215, 152, 33);
 
 }
+
+#btn{
+  height: 100%;
+  width: 100%;
+}
+
+.medium{
+  height: calc(100% / 9);
+  width: calc(100% / 9);
+}
+.hard{
+  height: calc(100% / 7);
+  width: calc(100% / 7);
+}
