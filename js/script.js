@@ -1,58 +1,43 @@
-const container = document.querySelector('.container');
-const startBtn = document.getElementById('btn');
-// const c = parseInt(prompt('testo'));
-// start(c);
-startBtn.addEventListener('click', start);
+const main = document.querySelector('.back');
+const playBtn = document.getElementById('play');
+const selectLevel = document.getElementById('level');
 
+const levels = [100, 81, 49];
 
-function start(){
+let cellNumbers;
+
+playBtn.addEventListener('click', play);
+
+function play(){
+
   reset();
-  for(let i = 1; i <= 100; i++){
-    const square = squareContainer(i);
-    container.append(square);
+  cellNumbers = levels[selectLevel.value];
+
+  generateCellBg();
+
+}
+
+
+function generateCellBg(){
+  const grid = document.createElement('div');
+  grid.className = 'container';
+
+  for(let i = 1; i <= cellNumbers; i++){
+    const cell = createCell(i);
+    grid.append(cell);
   }
+  
+  main.append(grid);
 }
 
- 
-  
-
-function squareContainer(number){
-  const sq = document.createElement('div');
-  sq.className = 'square';
-  
-  sq.propSq = number;
-
-  sq.addEventListener('click', function(){
-    const number = this.propSq;
-    this.innerHTML = (!this.classList.contains('color')) ? this.innerHTML = this.propSq : this.innerHTML = '';
-
-    this.classList.toggle('color');
-
-    console.log(this);
-  })
-
-
-  return sq;
+function createCell(index){
+  const cell = document.createElement('div');
+  cell.className = 'square';
+  cell.classList.add('cell' + cellNumbers);
+  cell._cellId = index;
+  return cell;
 }
-
-
-
 
 function reset(){
-  container.innerHTML = '';
+  main.innerHTML = '';
 }
-
-
-// function start(c){
-//   const uno = 100;
-//   const due = 81;
-//   const tre = 49;
-
-//   for(let i = 1; i <= c; i++){
-//       const square = squareContainer(i);
-//       container.append(square);
-
-//     }
-
-
-// }
