@@ -13,6 +13,21 @@
   width: 100%;
 }
 
+.head-container{
+  height: 50px;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#level{
+  width: 200px;
+}
+.btn-play{
+  height: 20px;
+  width: 50px;
+ background-color: rgb(227, 171, 67);
+}
 .container{
   background-color: crimson;
   height: 500px;
@@ -26,8 +41,6 @@
 }
 
 .square{
-  height: 10%;
-  width: 10%;
   border: 1px solid white;
   display: flex;
   align-items: center;
@@ -35,21 +48,21 @@
   cursor: pointer;
   
 }
-.color{
+.clicked{
   background-color: rgb(215, 152, 33);
 
 }
 
-#btn{
-  height: 100%;
-  width: 100%;
-}
 
-.medium{
+.cell100{
+  height: calc(100% / 10);
+  width: calc(100% / 10);
+}
+.cell81{
   height: calc(100% / 9);
   width: calc(100% / 9);
 }
-.hard{
+.cell49{
   height: calc(100% / 7);
   width: calc(100% / 7);
 }
